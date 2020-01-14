@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../shared/servies/data/data.service';
 
 @Component({
   selector: 'app-product',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
+  public products$: ReaplaySubject<any[]>;
 
-  constructor() { }
+  constructor(
+    private data: DataService
+
+  ) {
+    this.products$ = data.products$;
+
+   }
 
   ngOnInit() {
   }

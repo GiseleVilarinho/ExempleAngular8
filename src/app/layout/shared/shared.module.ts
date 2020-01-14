@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './component/header/header.component';
-
+import {HttpCleintModule} from '@angula/common/http';
 
 
 @NgModule({
@@ -9,7 +9,8 @@ import { HeaderComponent } from './component/header/header.component';
     HeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpCleintModule
   ],
   exports: [
     HeaderComponent
