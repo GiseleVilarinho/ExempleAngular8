@@ -9,7 +9,7 @@ export class DataService {
 
   public products: any[];
   public products$: ReplaySubject<any[]> = new ReplaySubject(1);
-  //nesse caso $ quer dizer que essa variavel é um observece
+  // nesse caso $ quer dizer que essa variavel é um observece//
 
   constructor(
     private produtcApi: ProductService
@@ -18,10 +18,12 @@ export class DataService {
 
   public getProducts() {
     this.produtcApi.getAll().subscribe(
-      (rest: any) => {
-        this.products = res;
+      (res: any) => {
         this.products$.next(res);
       }
       );
   }
+
+  public createProduct(product: any) {}
 }
+

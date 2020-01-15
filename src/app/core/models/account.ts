@@ -3,7 +3,7 @@ export class Account {
  'name': string;
  'email': string;
  'passowrd': string;
- constructor (data?:any) {
-     Object.assign(this,data);
+ constructor(data?: any) {
+     Object.assign(this, data);
  }
 }

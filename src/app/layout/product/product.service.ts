@@ -12,7 +12,11 @@ export class ProductService {
     private http: HttpClient
   ) { }
 
-  publi getAll() {
-    return this.http.get(this.url+'getall'); // verificar se uso url ou url+getall
+  public getAll() {
+    return this.http.get(this.url); // verificar se uso url ou url+getall
+  }
+
+  public create(product: any) {
+    return this.http.post(this.url, product); // comprar com o arquivo do joao
   }
 }

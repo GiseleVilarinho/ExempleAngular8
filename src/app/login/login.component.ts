@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AccountServiceService } from 'src/environments/account-service teste';
+import { Router } from '@angular/router';
+import { Account } from '../core/models/account';
+import { AccountServiceService } from '../core/services/account-service.service';
 
 @Component({
   selector: 'app-login',
@@ -22,5 +24,5 @@ export class LoginComponent implements OnInit {
   public login() {
     this.accountService.login(this.account);
     this.router.navigate (['/']);
-}
+  }
 }
